@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.pegasusvalidator.PegasusValidator">
+    <ToolBar maxHeight="50" minHeight="50" prefHeight="50" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <effect>
+            <DropShadow />
+        </effect>
+
+        <Label fx:id="lblIPhoneId" text="Kein Gerät gefunden" />
+
+        <Button fx:id="btnStartCheck" mnemonicParsing="false" text="Prüfe IPhone Sicherheit!" visible="false" />
+
+    </ToolBar>
+
+    <Label fx:id="lblSecurity" maxHeight="30" minHeight="30" prefHeight="30" text="Achtung: Es wird zu keiner Zeit Zugriff auf private Dateien angefordert! Es werden _ausschließlich_ eine temporäre 'Vertrauenszustimmung' benötigt." textFill="red" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="51" />
+
+
+
+    <HBox AnchorPane.bottomAnchor="90" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="80">
+      <TextArea fx:id="txtInfo"  wrapText="true" />
+        <TextArea fx:id="txtApps" />
+        <TextArea fx:id="txtLogs" AnchorPane.rightAnchor="0"  HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <Label maxHeight="30" minHeight="30" prefHeight="30" text="~~ Pegasus Validator wird niemals Zugriff auf Medien anfordern oder Daten des IPhones abspeichern! ~~" AnchorPane.bottomAnchor="35" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" />
+
+    <Label fx:id="lblStatus" maxHeight="40" minHeight="40" prefHeight="40" text="Status: Prüfe Gerät nach veränderter Software, sowie gehackten Apps und Einstellungen. " textFill="green" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" />
+
+</AnchorPane>
